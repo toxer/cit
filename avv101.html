@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Francesco Guccini - L'Avvelenata</title>
+  <style>
+    /* Reset e impostazioni di base */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #0f0f11 0%, #1a1a24 100%);
+      font-family: 'Georgia', serif;
+      color: #e0e0e0;
+      padding: 20px;
+      overflow-x: hidden;
+    }
+
+    /* Card principale */
+    .card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      padding: 40px 30px;
+      max-width: 650px;
+      width: 100%;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      position: relative;
+      /* Animazione di entrata della card */
+      animation: fadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    /* Icona decorativa con respiro animato */
+    .quote-icon {
+      font-size: 3rem;
+      color: #d4a373;
+      margin-bottom: 20px;
+      line-height: 1;
+      display: inline-block;
+      animation: pulse 3s infinite ease-in-out;
+    }
+
+    /* Citazione stilizzata */
+    blockquote {
+      font-size: 1.35rem;
+      line-height: 1.7;
+      font-style: italic;
+      color: #f1f1f1;
+      margin-bottom: 25px;
+    }
+
+    /* Evidenziazione versi con animazione progressiva */
+    .verse {
+      display: block;
+      opacity: 0;
+      transform: translateY(15px);
+      animation: fadeInVerse 0.8s forwards ease-out;
+    }
+
+    .verse:nth-child(1) { animation-delay: 0.4s; }
+    .verse:nth-child(2) { animation-delay: 0.9s; }
+
+    /* Autore */
+    .author {
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 0.95rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #d4a373;
+      font-weight: 600;
+      opacity: 0;
+      animation: fadeInVerse 0.8s forwards ease-out 1.4s;
+    }
+
+    .song-title {
+      display: block;
+      font-size: 0.8rem;
+      color: #888;
+      margin-top: 5px;
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+
+    /* Keyframes Animazioni */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.96);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes fadeInVerse {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 0.8;
+      }
+      50% {
+        transform: scale(1.1);
+        opacity: 1;
+      }
+    }
+
+    /* Adattamento per schermi piccoli (Mobile) */
+    @media (max-width: 480px) {
+      .card {
+        padding: 25px 18px;
+      }
+
+      blockquote {
+        font-size: 1.15rem;
+        line-height: 1.6;
+      }
+
+      .quote-icon {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="card">
+    
+    
+    <blockquote cite="Francesco Guccini - L'Avvelenata">
+      <span class="verse">
+        Ma s'io avessi previsto tutto questo, dati causa e pretesto, le attuali conclusioni
+      </span>
+      <br>
+      <span class="verse">
+        Credete che per questi quattro soldi, questa gloria da stronzi, avrei scritto canzoni?
+      </span>
+    </blockquote>
+
+    <div class="author">
+      Francesco Guccini
+      <span class="song-title">L'Avvelenata</span>
+    </div>
+  </main>
+
+</body>
+</html>
